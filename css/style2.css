@@ -15,6 +15,7 @@ body {
     font-size: 1.5em;;
     font-weight: 500;
   }
+  
 
 .dropdown {
   display:none;
@@ -60,6 +61,7 @@ body {
       text-align: center;
       margin: 15%;
     }
+
   h1{
       font-size: 5em;
       font-weight: 900;
@@ -147,11 +149,52 @@ body {
   background-color: pink;
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: #FFFAF3;
+  color: #303030;
+  transform: rotateY(180deg);
+  width: 300px;
+  height: 225px;
+  font-size: 1.25em;
+  padding-top: 20px;
+  outline-color: #F2DECC;
+  outline-style: outset;
+}
+
  #workGrid {
   justify-content: center;
   margin: 5% 10% 15% 10%;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 60% 40%;
  }
 
  #workTitle {
@@ -166,6 +209,7 @@ body {
  h5 {
    margin-top:15%;
    margin-bottom: -3%;
+   font-size: 0.9em;
  }
 
  h5 a {
@@ -213,12 +257,13 @@ body {
 
  #workTitle {
   text-align: left;
-  margin-bottom: 0%;
+  margin-top:15%;
   background-color: #F2DECC;
-  height: 200px;
+  height: 80px;
   width: 310px;
   padding-left: 5%;
   flex-direction: column;
+  margin-bottom: 0%;
  }
 
  h5 {
@@ -227,6 +272,7 @@ body {
 
  p {
    padding-right: 10%;
+   padding-left: 10%;
  }
 
  #workImg {
@@ -249,23 +295,6 @@ body {
 .navigation{
   display:none;
 }
-
-/*
-.menuImg {
-  display:flex;
-}
-.menuImg img{
-  padding-top: 25px;
-  height:20px;
-  margin-left: 300px;
- }
-
- .menuImg img:hover {
-  position: absolute;
-  transition: all 0.6s ease-in-out;
-  transform: rotate(-90deg);
- }
- */
 
  .dropdown {
   position: relative;
@@ -306,6 +335,47 @@ li a:hover {
 li a:visited {
   color: #AAAEAE;
   text-decoration: underline;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 347px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  background-color: #FFFAF3;
+  color: #303030;
+  transform: rotateY(180deg);
+  font-size: 1.25em;
+  padding-top: 20px;
+  outline-color: #F2DECC;
+  outline-style: outset;
+
 }
 
  }
